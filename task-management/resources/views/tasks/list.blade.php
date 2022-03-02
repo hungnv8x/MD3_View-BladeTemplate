@@ -18,6 +18,7 @@
             <th scope="col">Title</th>
             <th scope="col">Content</th>
             <th scope="col">Due Date</th>
+            <th scope="col">image</th>
         </tr>
         </thead>
         <tbody>
@@ -27,6 +28,9 @@
                 <td>{{$task->title}}</td>
                 <td>{{$task->content}}</td>
                 <td>{{$task->due_date}}</td>
+                <td>
+                    <img src="{{ asset('storage/images/' . $task->image) }}" alt="" style="width: 150px">
+                </td>
             </tr>
         @endforeach
         </tbody>
